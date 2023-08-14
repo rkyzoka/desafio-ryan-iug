@@ -40,7 +40,7 @@ class CaixaDaLanchonete {
       let codigoPedido = item.split(",")[0];
       let qtdPedido = parseInt(item.split(",")[1]);
 
-      if (!this.cardapio[codigoPedido]) return "Código inválido!";
+      if (!this.cardapio[codigoPedido]) return "Item inválido!";
       if (qtdPedido <= 0) return "Quantidade inválida!";
 
       if (
@@ -57,11 +57,6 @@ class CaixaDaLanchonete {
   }
 }
 
-console.log(
-  new CaixaDaLanchonete().calcularValorDaCompra("credito", [
-    "combo1,1",
-    "cafe,2",
-  ])
-);
+console.log(new CaixaDaLanchonete().calcularValorDaCompra("credito", []));
 
 export { CaixaDaLanchonete };
